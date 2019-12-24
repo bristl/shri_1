@@ -1,0 +1,17 @@
+.text
+  --screen-m: 1024px
+  &_align_center
+    text-align: center
+  &_size
+    @each $size in s, m, l, xl, xxl
+      &_#{$size}
+        height: var(--size-control-text-#{$size})
+        line-height: var(--size-control-lh-#{$size})
+  &_type
+    @each $type, $size in (h1: (18px 0 24px), h2: (45px 0 21px), h3: (42px 0 0), p: (15px 0 21px))
+      &_#{$type}
+        margin: #{$size}
+  &_view
+    @each $color in primary, secondary, ghost, link
+      &_#{$color}
+        background-color: var(--color-control-text-#{$color})

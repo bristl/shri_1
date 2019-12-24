@@ -1,0 +1,10 @@
+.section
+  &_indent-b
+    @each $size in xxl, xxxxl
+      &_#{$size}
+        margin-bottom: var(--#{$size})
+  &_space-v
+    @each $size in xxl, xxxxl
+      &_#{$size}
+        padding-top: var(--#{$size})
+        padding-bottom: var(--#{$size})

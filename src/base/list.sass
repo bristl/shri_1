@@ -1,0 +1,26 @@
+.list
+  &_border_all
+    border: solid 3px var(--color-control-bg-border)
+  &_view_default
+    background-color: var(--color-control-bg-default)
+  &__item
+    display: flex
+    &_border
+      &_top
+        border-top: solid 3px var(--color-control-bg-border)
+      &_bottom
+        border-bottom: solid 3px var(--color-control-bg-border)
+    &_distribute_between
+      justify-content: space-between
+    &_vertical-align_center
+      align-items: center
+    &_indent-t_m
+      margin-top: var(--m)
+    &_indent-b
+      @each $size in s, m, l, xl
+        &_#{$size}
+          margin-bottom: var(--#{$size})
+    &_space-b_s
+      padding-bottom: var(--s)
+    &_space-a_m
+      padding: var(--m)

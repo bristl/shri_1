@@ -1,0 +1,31 @@
+.informer
+  &_border_all
+    border: solid 3px var(--color-control-bg-border)
+  &_view_default
+    background-color: var(--color-control-bg-default)
+  &__content
+    display: flex
+    &_distribute
+      &_default
+        justify-content: flex-start
+      &_between
+        justify-content: space-between
+      &_center
+        justify-content: center
+    &_space-a
+      @each $size in xl, xxl
+        &_#{$size}
+          padding: var(--#{$size})
+  &__action
+    display: flex
+    &_distribute
+      &_default
+        justify-content: flex-start
+      &_between
+        justify-content: space-between
+      &_center
+        justify-content: center
+    &_space-a
+      @each $size in xl, xxl
+        &_#{$size}
+          padding: var(--#{$size})

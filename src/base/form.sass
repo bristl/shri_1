@@ -1,0 +1,31 @@
+.form
+  display: flex
+  &_border_all
+    border: solid 3px var(--color-control-bg-border)
+  &_view_default
+    background-color: var(--color-control-bg-default)
+  &__item
+    &_border_bottom
+      border: solid 3px var(--color-control-bg-border)
+      &:last-child
+        border: none
+    &_distribute_between
+      justify-content: space-between
+    &_vertical-align_center
+      align-items: center
+    &_indent-b
+      @each $size in xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl
+        &_#{$size}
+          margin-bottom: var(--#{$size})
+    &_space-h
+      @each $size in xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl
+        &_#{$size}
+          margin-left: var(--#{$size})
+          margin-right: var(--#{$size})
+    &_space-v
+      @each $size in xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl
+        &_#{$size}
+          padding-top: var(--#{$size})
+          padding-bottom: var(--#{$size})
+  &__label_width_default
+    width: 35%

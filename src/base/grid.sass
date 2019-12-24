@@ -1,0 +1,30 @@
+.grid
+  display: grid
+  //background: green
+  //width: 1200px
+  //height: 100px
+  &_m-columns
+    &_10
+      grid-template-columns: repeat(10, 1fr)
+    &_12
+      grid-template-columns: repeat(12, 1fr)
+  &_col-gap
+    &_two-thirds
+      margin-left: calc(var(--gap) / 3 * 2)
+      margin-right: calc(var(--gap) / 3 * 2)
+    &_full
+      margin-left: calc(var(--gap))
+      margin-right: calc(var(--gap))
+    &_half
+      margin-left: calc(var(--gap) / 2)
+      margin-right: calc(var(--gap) / 2)
+  &_row-gap
+    &_full
+      margin-left: calc(var(--gap))
+    &_half
+      margin-left: calc(var(--gap) / 2)
+  &__fraction
+    &_m-col
+      @each $size in 2, 3, 4, 5, 8
+        &_#{$size}
+          grid-column: span #{$size}

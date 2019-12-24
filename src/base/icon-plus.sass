@@ -1,0 +1,11 @@
+.icon-plus
+  display: flex
+  &_vertical-align_center
+    align-items: center
+  &__icon
+    &_indent-r
+      @each $size in s, m
+        &_#{$size}
+          margin-right: var(--#{$size})
+    &_indent-l_l
+      margin-left: var(--l)
