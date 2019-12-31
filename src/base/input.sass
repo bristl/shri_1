@@ -1,0 +1,7 @@
+.input
+  width: 100%
+  border: solid 3px var(--color-control-bg-border)
+  &_size
+    @each $size in s, m, l, xl, xxl
+      &_#{$size}
+        height: var(--size-control-button-s)

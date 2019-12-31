@@ -1,0 +1,5 @@
+.brand-logo
+  &_name
+    @each $name, $color in (blue: #5dcdf9, green: #23b324, red: #ff3333, purple: #c62cff)
+      &_#{$name}
+        background: #{$color}
