@@ -1,0 +1,9 @@
+.button
+  width: 200px
+  background: var(--color-control-bg-action)
+  &_size
+    @each $size in s, m, l, xl, xxl
+      &_#{$size}
+        height: var(--size-control-button-s)
+  &_width_full
+    width: 100%
