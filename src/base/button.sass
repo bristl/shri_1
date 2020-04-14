@@ -4,6 +4,6 @@
   &_size
     @each $size in s, m, l, xl, xxl
       &_#{$size}
-        height: var(--size-control-button-s)
+        height: var(--size-control-button-#{$size})
   &_width_full
     width: 100%
